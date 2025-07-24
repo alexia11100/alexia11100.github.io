@@ -3,15 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tela-experiencia.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 
     <title>Alexia Sacerdote</title>
   </head>
@@ -23,9 +29,12 @@
             <div id="titulo">
               <h1 id="digitando">Frontend Developer</h1>
             </div>
+
+            <h1 id="chaves-home">{}</h1>
+
             <p id="resumo">
               Olá mundo, sou <span id="nome">Alexia Sacerdote</span> uma
-              desenvolvedora front-end com experiência em Qualidade.
+              desenvolvedora Full Stack com experiência em Qualidade.
             </p>
           </div>
         </div>
@@ -109,15 +118,16 @@
       <div class="projeto-container">
         <div class="linha">
           <div class="card">
+            <img
+                src="img/Captura de tela de 2025-06-17 21-05-27.png"
+                alt="Projeto 1"
+              />
             <a
               href="https://github.com/alexia11100/Copia-do-Google"
               target="_blank"
               class="projeto-texto"
             >
-              <img
-                src="img/Captura de tela de 2025-06-17 21-05-27.png"
-                alt="Projeto 1"
-              />
+
               <div class="projeto-texto">
                 <h2>Google</h2>
                 <p>
@@ -229,7 +239,75 @@
     </main>
 
     <main id="experiencia">
-      <h1>Minha Trajetória Profissional</h1>
+      <h1>Trajetória Profissional</h1>
+
+      <div id="text-experiencia">
+        <div class="empresas">
+          <p class="empresa">DBC Company</p>
+          <img src="img/icons8-linha-50.png" alt="">
+
+          <div class="cargo-descricao">
+            <p class="cargo">Estagiaria de Quality Assurance</p>
+            <p class="data">(Julho 2023 - Outubro 2023)</p>
+            <ul class="descricao-cargo">
+
+              <li>Planejamento e execução de testes de software.</li>
+              <li>Automação de testes utilizando Cypress e Selenium.</li> 
+              <li>Criação e manutenção de scripts de testes em Java e JavaScript.</li>
+              <li>Utilização de Postman e Rest Assured para testes de API.</li>
+              <li>Aplicação de metodologias ágeis como Scrum em projetos de teste.</li>
+              <li>Documentação e reporte de bugs utilizando Trello.</li>
+              <li>Escrita de testes com BDD.</li>
+              <li>Gerenciamento e execução de consultas SQL em Oracle.</li>
+              <li>Utilização de Git para controle de versões e colaboração em equipe.</li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="empresas">
+          <p class="empresa">Getnet</p>
+          <img src="img/icons8-linha-50.png" alt="">
+
+          <div class="cargo-descricao">
+            <p class="cargo">Quality Assurance</p>
+            <p class="data">(Outubro 2023 – Agosto 2024)</p>
+
+            <ul class="descricao-cargo">
+              <li>Planejamento e execução de testes de software.</li>
+              <li>Automação de testes utilizando Cypress.</li>
+              <li>Utilização de Postman para testes de API.</li>
+              <li>Aplicação de metodologias ágeis como Scrum em projetos de teste.</li>
+              <li>Documentação e reporte de bugs utilizando Jira, Confluence e Zephyr scale.</li>
+              <li>Escrita de testes com BDD.</li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="empresas">
+          <p class="empresa">Banco BV</p>
+          <img src="img/icons8-linha-50.png" alt="">
+
+          <div class="cargo-descricao">
+            <p class="cargo">Quality Assurance</p>
+            <p class="data">(Outubro 2024 – Dezembro 2024)</p>
+          
+            <ul class="descricao-cargo">
+              <li>Suporte técnico a múltiplas squads e analistas de QA.</li>
+              <li>Experiência com ferramentas como CyberArk, Jenkins e Bitbucket.</li>
+              <li>Auxílio em atividades de planejamento e execução de testes automatizados.</li>
+              <li>Continuidade de suporte a tecnologias utilizadas no cliente anterior (Getnet).</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+
+    <main id="habilidades">
+      <h1>Habilidades</h1>
+      
     </main>
 
     <footer>
@@ -293,6 +371,6 @@
       </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="javascript/app.js"></script>
   </body>
 </html>
