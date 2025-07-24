@@ -40,7 +40,6 @@
     background-color: #fff;
     margin-left: 25vw;
     font-size: 1rem;
-
 }
 
 .menu-svg-btn:hover {
@@ -133,6 +132,7 @@ body {
 #meus-projetos{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 #meus-projetos h1 {
@@ -145,6 +145,7 @@ body {
     margin-left: 50rem;
     background-color: #ee6995;
     color: #fff;
+    margin-top: 5rem;
 
 }
 
@@ -153,6 +154,7 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 1.5rem;
+    margin-bottom: 20rem;
 }
 
 .linha {
@@ -248,7 +250,7 @@ body {
     margin-left: 40rem;
     background-color: #ee6995;
     color: #fff;
-    margin-top: 10rem;
+    margin-top: 3.5rem;
 }
 
 footer {
