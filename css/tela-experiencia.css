@@ -1,3 +1,20 @@
+#experiencia h1 {
+    display: flex;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000000;
+    width: fit-content;
+    font-size: 3rem;
+    border-bottom: 0.1rem  solid #f5c9c9;
+    padding-top: 5rem;
+}
+
+span {
+    color: #f5c9c9;
+}
+
 #text-experiencia {
     display: flex;
     justify-content: center;

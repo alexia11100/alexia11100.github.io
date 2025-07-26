@@ -52,7 +52,7 @@
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px #f5c9c9;
   transition: transform 0.9s;
   border-radius: 0.5rem;
 
