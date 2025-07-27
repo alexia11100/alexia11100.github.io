@@ -3,6 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Alexia Sacerdote - Full Stack Developer com experiência em Quality Assurance. Portfolio profissional mostrando projetos e experiências." />
+    <meta name="keywords" content="Alexia Sacerdote, Full Stack Developer, QA, Quality Assurance, Portfolio, JavaScript, Python, Java" />
+    <meta name="author" content="Alexia Sacerdote" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alexia Sacerdote - Full Stack Developer" />
+    <meta property="og:description" content="Portfolio profissional de Alexia Sacerdote, Full Stack Developer com experiência em Quality Assurance" />
+    
+    <!-- Performance and preload hints -->
+    <link rel="preload" href="css/styles.css" as="style" />
+    <link rel="preload" href="img/image.png" as="image" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,15 +60,16 @@
           </div>
         </div>
 
-        <img src="img/image.png" alt="foto de perfil" id="perfil-foto" />
-        <div id="menu-lateral">
-          <a class="menu-svg-btn" href="#home">
+        <img src="img/image.png" alt="Foto de perfil de Alexia Sacerdote" id="perfil-foto" loading="lazy" />
+        <nav id="menu-lateral" aria-label="Menu de navegação principal">
+          <a class="menu-svg-btn" href="#home" aria-label="Ir para seção inicial">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
               fill="#1f1f1f"
+              aria-hidden="true"
             >
               <path
                 d="M226.67-186.67h140v-246.66h226.66v246.66h140v-380L480-756.67l-253.33 190v380ZM160-120v-480l320-240 320 240v480H526.67v-246.67h-93.34V-120H160Zm320-352Z"
@@ -63,13 +77,14 @@
             </svg>
           </a>
 
-          <a class="menu-svg-btn" href="#meus-projetos">
+          <a class="menu-svg-btn" href="#meus-projetos" aria-label="Ir para seção de projetos">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
               fill="#1f1f1f"
+              aria-hidden="true"
             >
               <path
                 d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm0-80h640v-440H160v440Zm240-520h160v-80H400v80ZM160-200v-440 440Z"
@@ -77,13 +92,14 @@
             </svg>
           </a>
 
-          <a class="menu-svg-btn" href="#experiencia">
+          <a class="menu-svg-btn" href="#experiencia" aria-label="Ir para seção de experiência">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
               fill="#1f1f1f"
+              aria-hidden="true"
             >
               <path
                 d="M320-160h320v-120q0-66-47-113t-113-47q-66 0-113 47t-47 113v120Zm160-360q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM160-80v-80h80v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-80v-80h640v80h-80v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h80v80H160Zm320-80Zm0-640Z"
@@ -91,13 +107,14 @@
             </svg>
           </a>
 
-          <a class="menu-svg-btn" href="#habilidades">
+          <a class="menu-svg-btn" href="#habilidades" aria-label="Ir para seção de habilidades">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
               fill="#1f1f1f"
+              aria-hidden="true"
             >
               <path
                 d="m628.85-281.69 46.77-46.77q5.61-5.58 5.61-13.02 0-7.44-5.61-13.06L531.54-499.23q5.15-11.38 7.73-23.73t2.58-27.5q0-54.94-39.15-93.97t-94.24-39.03q-15.84 0-30.88 3.89t-29.19 10.8l88.61 89-59.08 59.08-89.38-89q-6.85 14.08-10.77 29.34-3.92 15.27-3.92 31.12 0 55.09 39.14 94.24 39.15 39.14 94.24 39.14 14.11 0 26.59-2.77 12.49-2.77 24.64-7.53l144.69 144.07q5.62 5.62 12.85 5.81 7.23.19 12.85-5.42ZM480.07-100q-78.84 0-148.21-29.92t-120.68-81.21q-51.31-51.29-81.25-120.63Q100-401.1 100-479.93q0-78.84 29.92-148.21t81.21-120.68q51.29-51.31 120.63-81.25Q401.1-860 479.93-860q78.84 0 148.21 29.92t120.68 81.21q51.31 51.29 81.25 120.63Q860-558.9 860-480.07q0 78.84-29.92 148.21t-81.21 120.68q-51.29 51.31-120.63 81.25Q558.9-100 480.07-100Zm-.07-60q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
@@ -105,20 +122,21 @@
             </svg>
           </a>
 
-          <a class="menu-svg-btn" href="#info-contato">
+          <a class="menu-svg-btn" href="#info-contato" aria-label="Ir para seção de contato">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
               fill="#1f1f1f"
+              aria-hidden="true"
             >
               <path
                 d="M170-72.31v-60h620v60H170Zm0-755.38v-60h620v60H170ZM480-420q45.77 0 77.88-32.11Q590-484.23 590-530t-32.12-77.88Q525.77-640 480-640q-45.77 0-77.88 32.12Q370-575.77 370-530q0 45.77 32.12 77.89Q434.23-420 480-420ZM172.31-180Q142-180 121-201q-21-21-21-51.31v-455.38Q100-738 121-759q21-21 51.31-21h615.38Q818-780 839-759q21 21 21 51.31v455.38Q860-222 839-201q-21 21-51.31 21H172.31Zm83.85-60q45-48.31 101.69-74.15Q414.54-340 480-340q65.46 0 122.15 25.85 56.69 25.84 101.69 74.15h83.85q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-455.38q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H172.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v455.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85h83.85Zm91.84 0h264q-29-20-62.5-30T480-280q-36 0-69.5 10T348-240Zm132-240q-20.85 0-35.42-14.57Q430-509.15 430-530q0-20.84 14.58-35.42Q459.15-580 480-580t35.42 14.58Q530-550.84 530-530q0 20.85-14.58 35.43Q500.85-480 480-480Zm0 0Z"
               />
             </svg>
           </a>
-        </div>
+        </nav>
       </div>
     </main>
 
@@ -139,7 +157,7 @@
                 <h2>Google</h2>
                 <p>
                   Página inicial do Google recriada com HTML e CSS puros para
-                  treinar layout, centralização e responsividade.
+                  treinar layout.
                 </p>
               </div>
             </a>
@@ -155,8 +173,7 @@
               <div class="projeto-texto">
                 <h2>Kanban</h2>
                 <p>
-                  Página inicial do Google recriada com HTML e CSS puros para
-                  treinar layout, centralização e responsividade.
+                  Kanban interativo com HTML, CSS e JavaScript, criado para praticar organização de tarefas e manipulação do DOM.
                 </p>
               </div>
             </a>
@@ -341,7 +358,7 @@
           <div class="card-h">
             <div class="card-inner">
               <div class="card-front">
-                <img src="img/icones-conhecimentos/js.png" alt="" />
+                <img src="img/icones-conhecimentos/js.png" alt="JavaScript" />
               </div>
               <div class="card-back">
                 <p>2 anos</p>
@@ -352,7 +369,7 @@
           <div class="card-h">
             <div class="card-inner">
               <div class="card-front">
-                <img src="img/icones-conhecimentos/python.png" alt="" />
+                <img src="img/icones-conhecimentos/python.png" alt="Python" />
               </div>
               <div class="card-back">
                 <p>2 anos</p>
@@ -363,7 +380,7 @@
           <div class="card-h">
             <div class="card-inner">
               <div class="card-front">
-                <img src="img/icones-conhecimentos/java.png" alt="" />
+                <img src="img/icones-conhecimentos/java.png" alt="Java" />
               </div>
               <div class="card-back">
                 <p>2 anos</p>
@@ -374,7 +391,7 @@
           <div class="card-h">
             <div class="card-inner">
               <div class="card-front">
-                <img src="img/icones-conhecimentos/html-5.png" alt="" />
+                <img src="img/icones-conhecimentos/html-5.png" alt="HTML5" />
               </div>
               <div class="card-back">
                 <p>3 meses</p>
@@ -385,7 +402,7 @@
           <div class="card-h">
             <div class="card-inner">
               <div class="card-front">
-                <img src="img/icones-conhecimentos/css-3.png" alt="" />
+                <img src="img/icones-conhecimentos/css-3.png" alt="CSS3" />
               </div>
               <div class="card-back">
                 <p>3 meses</p>
@@ -397,11 +414,23 @@
         <div id="fileira-2">
           <div class="card-h">
             <div class="card-inner">
-              <div class="card-front">
-                <img
-                  src="img/icones-conhecimentos/cypress_logo_icon_247239.png"
-                  alt=""
-                />
+              <div class="card-front">              <img
+                src="img/icones-conhecimentos/cypress_logo_icon_247239.png"
+                alt="Cypress"
+              />
+              </div>
+              <div class="card-back">
+                <p>2 anos</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-h">
+            <div class="card-inner">
+              <div class="card-front">              <img
+                src="img/icones-conhecimentos/1_dbeTcEaIPgyZZ6aaC519RQ.png"
+                alt="Rest Assured"
+              />
               </div>
               <div class="card-back">
                 <p>2 anos</p>
@@ -412,10 +441,7 @@
           <div class="card-h">
             <div class="card-inner">
               <div class="card-front">
-                <img
-                  src="img/icones-conhecimentos/1_dbeTcEaIPgyZZ6aaC519RQ.png"
-                  alt=""
-                />
+                <img src="img/icones-conhecimentos/selenium.svg" alt="Selenium" />
               </div>
               <div class="card-back">
                 <p>2 anos</p>
@@ -426,18 +452,7 @@
           <div class="card-h">
             <div class="card-inner">
               <div class="card-front">
-                <img src="img/icones-conhecimentos/selenium.svg" alt="" />
-              </div>
-              <div class="card-back">
-                <p>2 anos</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-h">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="img/icones-conhecimentos/postman-icon.webp" alt="" />
+                <img src="img/icones-conhecimentos/postman-icon.webp" alt="Postman" />
               </div>
               <div class="card-back">
                 <p>2 anos</p>

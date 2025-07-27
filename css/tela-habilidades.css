@@ -1,23 +1,36 @@
-#text-conhecimentos {
-    width: 50rem;
-    height: 100%;
+#habilidades {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+#text-conhecimentos {
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 #habilidades h1 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    color: #333;
 }
 
-#habilidades {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    display: flex;
-    justify-content: center;
+#text-conhecimentos p {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    color: #666;
+    margin: 0;
 }
 
 .cards {
@@ -96,4 +109,203 @@
 .texto-card-back {
   display: flex;
   flex-direction: column;
+}
+
+/* ===== MEDIA QUERIES FOR RESPONSIVE DESIGN ===== */
+
+/* Mobile First - Extra Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #habilidades {
+        padding: 1rem;
+        min-height: 80vh;
+    }
+    
+    #text-conhecimentos {
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+    
+    #habilidades h1 {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+    
+    #text-conhecimentos p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    
+    .cards {
+        gap: 1.5rem;
+        align-items: center;
+    }
+    
+    #fileira-1,
+    #fileira-2 {
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    
+    .card-h {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    
+    .card-back {
+        font-size: 0.7rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    #habilidades {
+        padding: 1.5rem;
+    }
+    
+    #text-conhecimentos {
+        margin-bottom: 2.5rem;
+    }
+    
+    .cards {
+        gap: 1.8rem;
+    }
+    
+    #fileira-1,
+    #fileira-2 {
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .card-h {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+    
+    .card-back {
+        font-size: 0.8rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    #habilidades {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cards {
+        gap: 2rem;
+    }
+    
+    #fileira-1,
+    #fileira-2 {
+        gap: 1.8rem;
+        justify-content: center;
+    }
+    
+    .card-h {
+        width: 5.8rem;
+        height: 5.8rem;
+    }
+    
+    .card-back {
+        font-size: 0.9rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #habilidades {
+        padding: 3rem 2rem;
+    }
+    
+    .cards {
+        gap: 2.5rem;
+    }
+    
+    #fileira-1,
+    #fileira-2 {
+        gap: 2rem;
+        justify-content: center;
+    }
+    
+    .card-h {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #habilidades {
+        padding: 4rem 3rem;
+    }
+    
+    .cards {
+        gap: 3rem;
+    }
+    
+    #fileira-1,
+    #fileira-2 {
+        gap: 2.5rem;
+    }
+    
+    .card-h {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+}
+
+/* Landscape orientation for mobile devices */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    #habilidades {
+        padding: 1rem;
+        min-height: 100vh;
+    }
+    
+    #text-conhecimentos {
+        margin-bottom: 1.5rem;
+    }
+    
+    #habilidades h1 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+    
+    .cards {
+        gap: 1rem;
+    }
+    
+    #fileira-1,
+    #fileira-2 {
+        gap: 0.8rem;
+    }
+    
+    .card-h {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .card-back {
+        font-size: 0.6rem;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .card-inner {
+        transition: none;
+    }
+    
+    .card-h:hover .card-inner {
+        transform: none;
+    }
+    
+    .descricao-cargo li::before {
+        transition: none;
+    }
+    
+    .descricao-cargo li:hover::before {
+        transform: none;
+    }
 }
