@@ -51,23 +51,28 @@
 
 #perfil-foto {
     position: relative;
-    width: 100%;
+    width: auto;
+    max-width: 45%;
+    height: auto;
+    max-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    order: -1;
-    margin-bottom: 2rem;
+    flex-shrink: 0;
+    order: 2;
 }
 
 #sobre-mim {
-    background-color: #ffe4ed;
+    background-color: transparent;
     min-height: 100vh;
     width: 100%;
     display: flex;
     padding: 2rem;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     flex: 1;
+    align-items: center;
+    gap: 3rem;
 }
 
 * {
@@ -90,6 +95,8 @@ body {
     min-height: 100vh;
     position: relative;
     align-items: stretch;
+    background-color: #ffe4ed;
+    width: 100%;
 }
 
 #home{
@@ -97,16 +104,16 @@ body {
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
+    background-color: #ffe4ed;
 }
 
 #home img {
     height: clamp(15rem, 25vw, 30rem);
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
     border-radius: 10px;
     object-fit: cover;
-    max-width: 90%;
-    width: auto;
+    width: 100%;
+    max-width: 100%;
 }
 
 
@@ -120,7 +127,7 @@ body {
 }
 
 #digitando {
-    font-size: clamp(2.5rem, 8vw, 8rem);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     margin-bottom: 0;
     font-family: monospace;
     color: #969696;
@@ -138,7 +145,9 @@ body {
     margin-bottom: 2rem;
     padding: 1rem;
     gap: 2rem;
-    max-width: 100%;
+    max-width: 50%;
+    justify-content: center;
+    order: 1;
 }
 
 #titulo {
@@ -146,7 +155,7 @@ body {
 }
 
 #resumo {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
     line-height: 1.7;
     max-width: 100%;
     text-align: justify;
@@ -177,6 +186,10 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 4rem;
+}
+
+.projeto-container-mobile {
+    display: none;
 }
 
 .linha {
@@ -406,34 +419,52 @@ footer button:focus {
 
 /* Mobile First - Extra Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .projeto-container {
+        display: none;
+    }
+    .projeto-container-mobile {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4rem;
+    }
     #home {
         min-height: 100vh;
         justify-content: center;
+        align-items: center;
         padding: 1rem 0;
+        background-color: #ffe4ed;
     }
     
     #conteudo-pagina-1 {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         min-height: 100vh;
         padding: 0;
+        background-color: #ffe4ed;
     }
-    
+
     #sobre-mim {
         padding: 1rem;
         text-align: center;
-        order: 2;
+        order: 1;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex: 1;
+        flex-direction: column;
+        gap: 1.5rem;
+        background-color: transparent;
+        min-height: auto;
     }
     
     #perfil-foto {
-        order: 1;
-        margin: 2rem 0 1rem 0;
+        order: -1;
+        margin: 0 0 1.5rem 0;
         width: 100%;
+        max-width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -450,10 +481,12 @@ footer button:focus {
         padding: 0.5rem;
         max-width: 100%;
         text-align: center;
+        order: 1;
+        margin-bottom: 0;
     }
     
     #digitando {
-        font-size: clamp(1.8rem, 6vw, 3rem);
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
         text-align: center;
     }
     
@@ -474,7 +507,7 @@ footer button:focus {
         padding: 0.3rem;
         gap: 0.5rem;
         top: auto;
-        bottom: 2rem;
+        bottom: 1rem;
         transform: none;
         flex-direction: row;
         justify-content: center;
@@ -483,9 +516,14 @@ footer button:focus {
         margin: 0 auto;
         left: 50%;
         transform: translateX(-50%);
+        position: fixed;
+        z-index: 1000;
     }
     
     .menu-svg-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 0.4rem;
         flex: 1;
         max-width: 50px;
@@ -534,23 +572,26 @@ footer button:focus {
     #home {
         min-height: 100vh;
         justify-content: center;
+        background-color: #ffe4ed;
     }
     
     #conteudo-pagina-1 {
         flex-direction: column;
         align-items: center;
         padding: 1rem;
+        background-color: #ffe4ed;
     }
     
     #sobre-mim {
         padding: 1.5rem;
-        order: 2;
+        order: 1;
         width: 100%;
         text-align: center;
+        background-color: transparent;
     }
     
     #perfil-foto {
-        order: 1;
+        order: 2;
         margin: 1.5rem 0;
         width: 100%;
         display: flex;
@@ -568,7 +609,7 @@ footer button:focus {
     }
     
     #digitando {
-        font-size: clamp(2rem, 6vw, 3.5rem);
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
     }
     
     #resumo {
@@ -600,6 +641,7 @@ footer button:focus {
     #home {
         min-height: 100vh;
         width: 100%;
+        background-color: #ffe4ed;
     }
     
     #conteudo-pagina-1 {
@@ -607,6 +649,7 @@ footer button:focus {
         align-items: center;
         min-height: 100vh;
         padding: 1rem;
+        background-color: #ffe4ed;
     }
     
     #sobre-mim {
@@ -617,6 +660,7 @@ footer button:focus {
         justify-content: center;
         align-items: center;
         height: 100vh;
+        background-color: transparent;
     }
     
     #perfil-foto {
@@ -647,7 +691,7 @@ footer button:focus {
     }
     
     #digitando {
-        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-size: clamp(2rem, 4vw, 3rem);
     }
     
     #resumo {
@@ -669,6 +713,7 @@ footer button:focus {
     #home {
         min-height: 100vh;
         width: 100%;
+        background-color: #ffe4ed;
     }
     
     #conteudo-pagina-1 {
@@ -676,6 +721,7 @@ footer button:focus {
         align-items: center;
         min-height: 100vh;
         padding: 2rem;
+        background-color: #ffe4ed;
     }
     
     #sobre-mim {
@@ -686,6 +732,7 @@ footer button:focus {
         justify-content: center;
         align-items: center;
         height: 100vh;
+        background-color: transparent;
     }
     
     #perfil-foto {
@@ -716,7 +763,7 @@ footer button:focus {
     }
     
     #digitando {
-        font-size: clamp(3rem, 6vw, 6rem);
+        font-size: clamp(2.2rem, 4vw, 3.5rem);
     }
     
     #resumo {
@@ -735,17 +782,20 @@ footer button:focus {
 @media only screen and (min-width: 1200px) {
     #home {
         min-height: 100vh;
+        background-color: #ffe4ed;
     }
     
     #conteudo-pagina-1 {
         padding: 3rem;
         max-width: 1400px;
         margin: 0 auto;
+        background-color: #ffe4ed;
     }
     
     #sobre-mim {
         padding: 4rem 6rem;
         max-width: none;
+        background-color: transparent;
     }
     
     #perfil-foto {
@@ -764,7 +814,7 @@ footer button:focus {
     }
     
     #digitando {
-        font-size: clamp(3.5rem, 7vw, 7rem);
+        font-size: clamp(2.5rem, 5vw, 4rem);
     }
     
     #resumo {
@@ -779,6 +829,7 @@ footer button:focus {
     #home {
         min-height: 100vh;
         width: 100%;
+        background-color: #ffe4ed;
     }
     
     #conteudo-pagina-1 {
@@ -786,6 +837,7 @@ footer button:focus {
         min-height: 100vh;
         align-items: center;
         padding: 0.5rem;
+        background-color: #ffe4ed;
     }
     
     #sobre-mim {
@@ -796,6 +848,7 @@ footer button:focus {
         justify-content: center;
         align-items: center;
         height: 100vh;
+        background-color: transparent;
     }
     
     #perfil-foto {
@@ -875,16 +928,6 @@ footer button:focus {
 /* ===== ADDITIONAL HOME SECTION IMPROVEMENTS ===== */
 
 /* Improved base styles for better responsiveness */
-#sobre-mim {
-    background-color: #ffe4ed;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
-    flex-direction: column;
-    flex: 1;
-}
 
 #perfil-foto {
     position: relative;
@@ -959,10 +1002,12 @@ footer button:focus {
         max-width: 1600px;
         margin: 0 auto;
         padding: 4rem;
+        background-color: #ffe4ed;
     }
     
     #sobre-mim {
         padding: 5rem 8rem;
+        background-color: transparent;
     }
     
     #perfil-foto {
@@ -974,7 +1019,7 @@ footer button:focus {
     }
     
     #digitando {
-        font-size: clamp(4rem, 8vw, 8rem);
+        font-size: clamp(3rem, 6vw, 5rem);
     }
     
     #resumo {
@@ -988,11 +1033,17 @@ footer button:focus {
     #home {
         min-height: auto;
         page-break-inside: avoid;
+        background-color: #ffe4ed;
     }
     
     #conteudo-pagina-1 {
         flex-direction: column;
         min-height: auto;
+        background-color: #ffe4ed;
+    }
+    
+    #sobre-mim {
+        background-color: transparent;
     }
     
     #menu-lateral {
